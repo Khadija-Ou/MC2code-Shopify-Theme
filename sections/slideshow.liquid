@@ -1,13 +1,7 @@
 <section  class="splide "  aria-label="Splide Basic HTML Example">
     <div class="splide__track relative ">
       <ul class="splide__list ">
-        {% for block in section.blocks %}
-
-          {% assign bg_color = block.settings.bg_color | color_to_rgb %}       
-          {% assign opacity = block.settings.opacity %}       
-          {% assign opacityWithEndBracket = ', ' | append: opacity | append: ')' %}       
-          {% assign rgba = bg_color | replace: 'rgb', 'rgba' | replace:')', opacityWithEndBracket %}  
-          
+        {% for block in section.blocks %}          
           <li class="splide__slide h-[70vh] lg:h-[60vh] xl:h-[40vh] " >
             {%- if block.settings.image != blank -%}
               <img class="h-full w-full object-cover " src="{{ block.settings.image | image_url }}" loading="lazy" alt="img">
@@ -16,14 +10,14 @@
              {%- endif -%}       
                  
            <div class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full m-auto flex items-center justify-center flex-col flex-wrap space-y-[25px]  text-center " style="background-color: {{ block.settings.bg_color | hex_to_rgba: 0.5 }} ;  color: {{ block.settings.text_color }}">
-                <h1 class=" page-width font-bold  text-2xl lg:text-4xl ">
+                <h1 class=" page-width font-bold text-2xl lg:text-4xl ">
                    {{ block.settings.heading }}   
                  </h1>
-                 <div class="page-width text-sm lg:text-base	">
+                 <div class="page-width text-sm lg:text-base">
                     {{ block.settings.text }}
                  </div>
                 <div class="page-width">
-                    <a class="{% if block.settings.button_label != blank %} bg-[#e4c18d] font-bold mt-4  text-1xl lg:text-1xl py-2 px-3 mx-auto {% endif %}" href="{{ block.settings.button_link }}" >
+                    <a class="{% if block.settings.button_label != blank %}  text-base lg:text-xl px-4 py-2 rounded-sm mx-auto {% endif %}" href="{{ block.settings.button_link }}" style="background-color: {{ section.settings.buttons_color }}">
                       {{ block.settings.button_label | escape }}
                     </a>
                   </div>
@@ -41,6 +35,12 @@
     "tag": "section",
     "class": "section",
     "settings": [
+      {
+        "type": "color",
+        "id": "buttons_color",
+        "label": "Color",
+        "default": "#000"
+      }
     ],
     "blocks": [
       {
