@@ -1,0 +1,22 @@
+<div class="bg-red-500 font-thin text-20">
+    Hellow world
+</div>
+{% schema %}
+{
+  "name": "list-featured-collections",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    }]
+}
+{% endschema %}

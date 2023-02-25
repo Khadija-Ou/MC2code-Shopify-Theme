@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// variables
+$btn-height: 44px;
+
+// Header
+.header {
+  display: grid;
+  grid-template-areas: 'header-logo header-menu header-icons';
+  grid-template-columns: 1fr 2fr 1fr;
+  .header__logo {
+    grid-area: header-logo;
+  }
+  .header__menu {
+    grid-area: header-menu;
+  }
+  .header__icons {
+    grid-area: header-icons;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-areas: 'header-menu header-logo header-icons';
+  }
+  // submenu
+  .nav__item {
+    &:hover {
+      .nav__item-submenu {
+        display: block;
+      }
+    }
+
+    .nav__item-submenu {
+      display: none;
+    }
+  }
+}
+
+// Helpers
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-width-desktop {
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding: 0 5rem;
+  }
+
+  .page-width--narrow {
+    padding: 0 9rem;
+  }
+
+  .page-width-desktop {
+    padding: 0;
+  }
+
+  .page-width-tablet {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .page-width--narrow {
+    max-width: 72.6rem;
+    padding: 0;
+  }
+
+  .page-width-desktop {
+    max-width: var(--page-width);
+    padding: 0 5rem;
+  }
+}
+
+// buttons
+.shopify-payment-button {
+  button {
+    @apply rounded-sm bg-black text-white;
+    min-height: $btn-height !important;
+  }
+  .shopify-payment-button__more-options {
+    @apply mt-2;
+  }
+}
+
+.button__primary {
+  @apply my-2 flex items-center rounded-sm bg-black px-6 text-white;
+  min-height: $btn-height;
+}
+
+// product form
+.product-form__input {
+  // select label after checked radio input
+  input[type='radio']:checked + label {
+    @apply bg-black text-white;
+  }
+}
+
+// Collection filter
+.filter-form {
+  .filter-group {
+    &[open] {
+      .arrow-icon {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

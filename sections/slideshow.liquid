@@ -1,0 +1,103 @@
+<section  class="splide "  aria-label="Splide Basic HTML Example">
+    <div class="splide__track relative ">
+      <ul class="splide__list ">
+        {% for block in section.blocks %}
+
+          {% assign bg_color = block.settings.bg_color | color_to_rgb %}       
+          {% assign opacity = block.settings.opacity %}       
+          {% assign opacityWithEndBracket = ', ' | append: opacity | append: ')' %}       
+          {% assign rgba = bg_color | replace: 'rgb', 'rgba' | replace:')', opacityWithEndBracket %}  
+          
+          <li class="splide__slide h-[70vh] lg:h-[60vh] xl:h-[40vh] " >
+            {%- if block.settings.image != blank -%}
+              <img class="h-full w-full object-cover " src="{{ block.settings.image | image_url }}" loading="lazy" alt="img">
+              {%- else -%}
+              {{ 'collection-4' | placeholder_svg_tag: 'h-full w-full object-cover' }}
+             {%- endif -%}       
+                 
+           <div class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full m-auto flex items-center justify-center flex-col flex-wrap space-y-[25px]  text-center " style="background-color: {{ block.settings.bg_color | hex_to_rgba: 0.5 }} ;  color: {{ block.settings.text_color }}">
+                <h1 class=" page-width font-bold  text-2xl lg:text-4xl ">
+                   {{ block.settings.heading }}   
+                 </h1>
+                 <div class="page-width text-sm lg:text-base	">
+                    {{ block.settings.text }}
+                 </div>
+                <div class="page-width">
+                    <a class="{% if block.settings.button_label != blank %} bg-[#e4c18d] font-bold mt-4  text-1xl lg:text-1xl py-2 px-3 mx-auto {% endif %}" href="{{ block.settings.button_link }}" >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  </div>
+            </div>         
+           </li>
+        {% endfor %}
+      </ul>
+    </div>
+</section> 
+
+
+{% schema %}
+  {
+    "name": "Slide Show",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Image slide",
+            "label": "Image slide Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "label": "subheading"
+          }, {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }, {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#fff"
+          }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Color",
+            "default": "#000"
+          }
+        ],
+        "limit": 5
+      }
+    ],
+    "presets": [
+      {
+        "name": "slideshow",
+        "blocks": [
+          {
+            "type": "slide"
+          }, {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
