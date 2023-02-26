@@ -7,7 +7,7 @@
           {%- endif -%}
         </div>
       
-        <div style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 98%)" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-[5%] overflow-hidden{% else %} {%-endif-%}">
+        <div  class="card-styles absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-[5%] overflow-hidden{% else %} {%-endif-%}">
            <a href="{{ card_collection.url }}" class="text-white font-bold text-center  text-base lg:text-xl  w-[100%] h-[100%] flex justify-center items-end pb-8 " >
               {%- if card_collection.title != blank -%}
                 {{- card_collection.title | escape -}}

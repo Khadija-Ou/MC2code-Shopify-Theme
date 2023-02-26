@@ -13,7 +13,7 @@
     <div class= "grid grid-cols-1  gap-10  ">
       <div class="collection-list flex md:space-x-6 space-x-2 ">
     {%- for block in section.blocks -%}
-              {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, class: '' %}
+              {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, class: 'collection' %}
           {%- endfor -%}
           
         </div>
