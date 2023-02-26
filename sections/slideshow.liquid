@@ -17,7 +17,7 @@
                     {{ block.settings.text }}
                  </div>
                 <div class="page-width">
-                    <a class="{% if block.settings.button_label != blank %}  text-base lg:text-xl px-4 py-2 rounded-sm mx-auto {% endif %}" href="{{ block.settings.button_link }}" style="background-color: {{ section.settings.buttons_color }}">
+                    <a class="{% if block.settings.button_label != blank %}    text-base lg:text-xl px-4 py-2 rounded-md border border-white-500 mx-auto {% endif %}" href="{{ block.settings.button_link }}" style="background-color: {{ section.settings.buttons_color | hex_to_rgba: 0.6 }}">
                       {{ block.settings.button_label | escape }}
                     </a>
                   </div>
@@ -38,7 +38,7 @@
       {
         "type": "color",
         "id": "buttons_color",
-        "label": "Color",
+        "label": "Button's Color",
         "default": "#000"
       }
     ],
@@ -76,12 +76,12 @@
             "type": "color",
             "id": "bg_color",
             "label": "Background color",
-            "default": "#fff"
+            "default": "#000"
           }, {
             "type": "color",
             "id": "text_color",
             "label": "Color",
-            "default": "#000"
+            "default": "#fff"
           }
         ],
         "limit": 5
