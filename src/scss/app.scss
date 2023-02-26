@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+//Hide scrollbar but keep functionality for the colection-list.liquid
+.collection-list::-webkit-scrollbar {
+  display: none;
+}
+.collection-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.collection-list {
+  overflow-x: scroll;
+}
 // variables
 $btn-height: 44px;
 

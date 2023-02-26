@@ -1,18 +1,21 @@
-<div class="">
+<div class="relative ">
+  <div  class="md:h-[300px] md:w-[200px] h-[225px] w-[150px] overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-[5%] overflow-hidden{% else %} {%-endif-%}">
       {%- if card_collection.featured_image -%}
-        <div class="md:h-[250px] md:w-[200px] h-[200px] w-[150px] overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'rounded' %} rounded-[50%] {% elsif card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-[15%] {% else %} {%-endif-%}  ">
-            <img class="object-cover w-[100%] h-[100%] " src="{{ card_collection.featured_image | image_url: width: 1500 }}" loading="lazy" alt="img">
+            <img class="object-cover w-full h-full " src="{{ card_collection.featured_image | image_url: width: 1500 }}" loading="lazy" alt="img" >
+            {%- else -%}
+            {{ 'collection-4' | placeholder_svg_tag: 'object-cover w-[100%] h-[100%] border-2' }}
+          {%- endif -%}
         </div>
-      {%- endif -%}
       
-          <h3 class="text-black text-xl ">
-            <a href="{{ card_collection.url }}" class="flex justify-center items-center">
+        <div style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 98%)" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-[5%] overflow-hidden{% else %} {%-endif-%}">
+           <a href="{{ card_collection.url }}" class="text-white font-bold text-center  text-base lg:text-xl  w-[100%] h-[100%] flex justify-center items-end pb-8 " >
               {%- if card_collection.title != blank -%}
                 {{- card_collection.title | escape -}}
               {%- else -%}
-                {{ 'onboarding.collection_title' | t }}
+                Collection Name
               {%- endif -%}
 
             </a>
-          </h3>
+
+          </div>
 </div>
