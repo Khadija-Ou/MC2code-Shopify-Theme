@@ -20,17 +20,11 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "subtotal",
-        "buttons"
-      ],
+      "block_order": ["subtotal", "buttons"],
       "settings": {
         "show_cart_note": false
       }
     }
   },
-  "order": [
-    "cart-items",
-    "cart-footer"
-  ]
+  "order": ["cart-items", "cart-footer"]
 }
