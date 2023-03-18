@@ -10,8 +10,8 @@
       </div>
       {% endunless %}
 
-    <div class= "grid grid-cols-1  gap-10  ">
-      <div class="collection-list flex md:space-x-6 space-x-2 ">
+    <div class= "">
+      <div class="collection-list flex md:space-x-10 space-x-8 ">
     {%- for block in section.blocks -%}
               {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, class: 'collection' %}
           {%- endfor -%}
@@ -45,7 +45,7 @@
     }
   ],
   "default": "square",
-  "label": "option_3"
+  "label": "option_2"
 },
     {
       "type": "range",
