@@ -133,13 +133,13 @@ $btn-height: 44px;
 }
 
 //Hide scrollbar but keep functionality for the colection-list.liquid
-.collection-list::-webkit-scrollbar {
+.scrollbar::-webkit-scrollbar {
   display: none;
 }
-.collection-list {
+.scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-.collection-list {
+.scrollbar {
   overflow-x: scroll;
 }
