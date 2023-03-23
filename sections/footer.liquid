@@ -1,86 +1,72 @@
 
-<footer class="footer pt-8 mt-8">
-  {% if section.settings.show_newsletter %}
-    <div class="footer__newsletter page-width">
-      {% if section.settings.newsletter_title != blank %}
-        <h2 class="text-center text-3xl font-default">{{ section.settings.newsletter_title }}</h2>
-      {% endif %}
-      {% if section.settings.newsletter_subtitle != blank %}
-        <div class="text-base py-2 font-medium">
-          {{ section.settings.newsletter_subtitle }}
-        </div>
-      {% endif %}
+<footer class="footer pt-8 mt-8" style="background-color: {{ section.settings.bg_color }} ;  color: {{ section.settings.text_color }}">
+    {%- if section.blocks.size > 0 -%}
+      <div class="page-width pt-8">
+        {%- if section.blocks.size > 0 -%}
+          <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-4 gap-4">
+            {%- for block in section.blocks -%}
+              <div class=" {% if block.type == 'link_list' and block.settings.heading != blank %} menu-block{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="text-lg font-medium uppercase mb-2">{{- block.settings.heading | escape -}}</h3>
+                {%- endif -%}
+  
+                {%- case block.type -%}
+  
+                  {%- when 'social_links' -%}
+                    {%- if block.settings.show_icons -%}
+                      <div class="h-20 w-20 flex space-x-2">
+                        {% render 'icon-instagram' %}
+                        {% render 'icon-twitter' %}
+                        {% render 'icon-youtube' %}
+                      </div>
 
-      {% if section.settings.newsletter_html != blank %}
-        <div class="footer__newsletter--html">
-          {{ section.settings.newsletter_html }}
-        </div>
-      {% endif %}
-
-    </div>
-  {% endif %}
-
-  {%- if section.blocks.size > 0 -%}
-    <div class="footer__content-top page-width pt-8">
-      {%- if section.blocks.size > 0 -%}
-        <div class="footer__blocks-wrapper grid grid-cols-1 md:grid-cols-4 gap-4">
-          {%- for block in section.blocks -%}
-            <div class="footer-block bg-white grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h3 class="footer-block__heading font-medium uppercase mb-2 text-lg">{{- block.settings.heading | escape -}}</h3>
-              {%- endif -%}
-
-              {%- case block.type -%}
-
-                {%- when 'social_links' -%}
-                  {%- if block.settings.show_icons -%}
-                    {% render 'social_links' %}
-                  {%- endif -%}
-                {%- when 'text' -%}
-                  <div class="footer-block__details-content rte">
-                    {{ block.settings.subtext }}
-                  </div>
-                {%- when 'link_list' -%}
-                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled font-medium">
-                      {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" {% if link.url contains '#' %} title="Link" {%- endif -%} class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%} 
-                    
-                {%- when 'image' -%}
-
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                    {%- if block.settings.image != blank -%}
-                      {%- assign image_size = block.settings.image_width -%}
-                      <img
-                        srcset= "{{ block.settings.image | image_url: width: image_size }}, {{ block.settings.image | image_url: width: image_size, scale: 2 }} 2x"
-                        src="{{ block.settings.image | image_url: width: 400 }}"
-                        alt="{{ block.settings.image.alt | escape }}"
-                        loading="lazy"
-                        width="{{ block.settings.image.width }}"
-                        height="{{ block.settings.image.height }}"
-                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                      >
-                    {%- else -%}
-                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
-                  </div>
-                {%- endcase -%}
-            </div>
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
+                  {%- when 'text' -%}
+                    <div class="rte py-2">
+                      {{ block.settings.subtext }}
+                    </div>
+                  {%- when 'link_list' -%}
+                    {%- if block.settings.menu != blank and block.settings.heading != blank -%}
+                      <ul class="list-unstyled font-medium">
+                        {%- for link in block.settings.menu.links -%}
+                          <li>
+                            <a href="{{ link.url }}" {% if link.url contains '#' %} title="Link" {%- endif -%} class="link link--text{% if link.active %} active{% endif %}">
+                              {{ link.title }}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%} 
+                      
+                  {%- when 'image' -%}
+  
+                    <div class="flex md:flex-none  md:justify-start justify-center {{ block.settings.alignment }}">
+                      {%- if block.settings.image != blank -%}
+                        {%- assign image_size = block.settings.image_width -%}
+                        <img
+                          srcset= "{{ block.settings.image | image_url: width: image_size }}, {{ block.settings.image | image_url: width: image_size, scale: 2 }} 2x"
+                          src="{{ block.settings.image | image_url: width: 400 }}"
+                          alt="{{ block.settings.image.alt | escape }}"
+                          loading="lazy"
+                          width="{{ block.settings.image.width }}"
+                          height="{{ block.settings.image.height }}"
+                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                        >
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                    </div>
+                  {%- endcase -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+  
 
     </div>
   {%- endif -%}
 
-  <div class="footer__content-bottom pb-6 pt-4">
+  <div class="pb-6 pt-4">
     <div class="page-width">
       
       <div class="footer__column footer__column--info flex items-center justify-center md:justify-between flex-wrap">
@@ -220,47 +206,19 @@
   "settings": [
     {
       "type": "header",
-      "content": "Newsletter form"
+      "content": "Styles"
     },
     {
-      "type": "checkbox",
-      "id": "show_newsletter",
-      "default": false,
-      "label": "Show newsletter"
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#fff"
     },
     {
-      "type": "text",
-      "id": "newsletter_title",
-      "label": "Newsletter title"
-    },
-    {
-      "type": "richtext",
-      "id": "newsletter_subtitle",
-      "label": "Sub title"
-    },
-    {
-      "type": "html",
-      "id": "newsletter_html",
-      "label": "Newsletter HTML"
-    },
-    {
-      "type": "header",
-      "content": "Copyright"
-    },
-    {
-      "type": "richtext",
-      "id": "copyright_text",
-      "label": "Copyright text"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
+      "type": "color",
+      "id": "text_color",
+      "label": "text Color",
+      "default": "#000"
     }
   ],
   "default": {
