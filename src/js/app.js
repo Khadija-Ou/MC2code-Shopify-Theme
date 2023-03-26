@@ -2,6 +2,7 @@ import Alpine from 'alpinejs'
 import persist from '@alpinejs/persist'
 import '@splidejs/splide/css'
 import { Splide } from '@splidejs/splide'
+import Slider from './Slider'
 
 document.addEventListener('DOMContentLoaded', function () {
   new Splide('.splide', {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.Alpine = Alpine
 Alpine.plugin(persist)
+Alpine.data('Slider', Slider)
 
 Alpine.start()
 

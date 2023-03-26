@@ -10,14 +10,14 @@
 
     <div class="product__media-wrapper md:col-span-2 relative" x-data="Slider">
 
-      <div class="flex overflow-x-scroll md:grid grid-cols-2 gap-3 snap-x snap-mandatory" x-ref="slider" 
+      <div class="flex scrollbar md:grid grid-cols-2 gap-3 snap-x snap-mandatory" x-ref="slider" 
         @keydown.right="next"
         @keydown.left="prev">
         {% for media in product.media %}
             {% if forloop.first %}
               {% render 'media', media: media, class: 'w-full snap-start flex-shrink-0 col-span-2' %}
             {% else %}
-              {% render 'media', media: media, class: 'w-full snap-start flex-shrink-0' %}
+              {% render 'media', media: media, class: 'w-full h-full object-cover snap-start flex-shrink-0' %}
             {% endif %}
         {% endfor %}
 
@@ -36,7 +36,7 @@
       
     </div>
 
-    <div class="product__info-wrapper sticky top-12 self-start">
+    <div class="md:text-left text-center sticky top-12 self-start">
       <div>
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
