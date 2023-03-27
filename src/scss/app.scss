@@ -143,3 +143,12 @@ $btn-height: 44px;
 .scrollbar {
   overflow-x: scroll;
 }
+
+//zoom the image on hover
+.transition-transform-gpu {
+  transition: transform 0.3s ease-out;
+  transform-origin: center;
+}
+.hover\:scale-150:hover {
+  transform: scale(1.5) translate(-25%, -25%);
+}

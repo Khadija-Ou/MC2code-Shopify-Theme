@@ -1,0 +1,32 @@
+
+<div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:border-gray-700" style="background-color: {{ card_color }}">
+    <a href="{{ card_collection.url }}"  >
+        <div class="relative overflow-hidden">
+            {%- if card_collection.featured_image -%}
+                <img class="object-cover rounded-t-lg h-[366px] w-full transition-transform-gpu hover:scale-150" src="{{ card_collection.featured_image | image_url: width: 1500 }}" loading="lazy" alt="img" >
+                {%- else -%}
+                {{ 'collection-4' | placeholder_svg_tag: 'rounded-lg' }}
+            {%- endif -%}   
+        </div>
+         </a>
+    <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style="color: {{ title_botton_color }}">
+                {%- if card_collection.title != blank -%}
+                    {{- card_collection.title | escape -}}
+                  {%- else -%}
+                    Collection Name
+                  {%- endif -%}
+            </h5>
+        <p class="mb-3 font-normal" style="color: {{ text_color }}">
+            {%- if card_collection.description != blank -%}
+                {{- card_collection.description -}}
+              {%- else -%}
+                Here goes the collection's descriptione 🙂
+              {%- endif -%}
+        </p>
+        <a href="{{ card_collection.url }}" class="inline-flex items-center px-3 py-2 text-sm font-medium bg-[#ED9393] mt-4 hover:bg-[#EA6A6A]  rounded-lg transform hover:scale-105 transition duration-300 ease-in-out" style="color: {{ title_botton_color }}">
+            See all the products
+            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+    </div>
+</div>
