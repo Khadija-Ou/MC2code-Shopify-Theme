@@ -7,10 +7,10 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-arsham-haghani-3536991_a7c36f13-715f-4f1f-8d7a-50daa673d952.jpg",
-            "heading": "Explore our wold",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Explore Now",
-            "button_link": "",
+            "heading": "Explore our world",
+            "text": "<p>The intricate design of the pendant is inspired by the natural beauty of flora, and the rich colors of the gemstone complement it perfectly. The necklace is versatile enough to wear every day and can add a touch of sophistication to any outfit. <\/p>",
+            "button_label": "EXPLORE MORE!",
+            "button_link": "shopify:\/\/collections\/all",
             "bg_color": "#000000",
             "text_color": "#ffffff"
           }
@@ -20,9 +20,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/sama-hosseini-GtOo17K-vTg-unsplash_66932675-5a4f-4a31-8a37-9a2aabecd5c1.jpg",
             "heading": "World Of Beauty",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "See More",
-            "button_link": "",
+            "text": "<p>The intricate design of the pendant is inspired by the natural beauty of flora, and the rich colors of the gemstone complement it perfectly. The necklace is versatile enough to wear every day and can add a touch of sophistication to any outfit. <\/p>",
+            "button_label": "DISCOVER THE BEAUTY OF STONES",
+            "button_link": "shopify:\/\/collections\/all",
             "bg_color": "#000000",
             "text_color": "#ffffff"
           }
@@ -32,11 +32,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-marina-leonova-9245015.jpg",
             "heading": "Hidden Beauty",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Know More",
-            "button_link": "",
-            "bg_color": "#f9eacc",
-            "text_color": "#272727"
+            "text": "<p>The intricate design of the pendant is inspired by the natural beauty of flora, and the rich colors of the gemstone complement it perfectly. The necklace is versatile enough to wear every day and can add a touch of sophistication to any outfit. <\/p>",
+            "button_label": "SHOP NOW!",
+            "button_link": "shopify:\/\/collections\/all",
+            "bg_color": "#000000",
+            "text_color": "#ffffff"
           }
         }
       },
@@ -46,12 +46,18 @@
         "e9d7b685-5f5f-4864-919d-c96c7279e638"
       ],
       "settings": {
-        "buttons_color": "#000"
+        "buttons_color": "#ed9393"
       }
     },
     "311862e4-191e-4bd6-bc5d-0594dce09037": {
       "type": "collection-list",
       "blocks": {
+        "8ffcfe3f-89d3-4692-92bb-2deabd20d175": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-arrivals"
+          }
+        },
         "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-0": {
           "type": "featured_collection",
           "settings": {
@@ -67,60 +73,19 @@
         "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "braceletes"
-          }
-        },
-        "5f0e23d2-4cc0-4982-acf9-8935732cb01c": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "a749ef8c-b8df-429d-b6ae-cc41edc28c2b": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "d1a3f4fa-41bb-4e78-bfcf-c627308650e2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "d40cde76-dd90-451f-b2cf-79e3cbf33220": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "1e8e1f25-0141-4329-95a6-c95457d93750": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "5d5ca76c-e8f2-4934-9414-3f1b8a793ebf": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "necklaces"
           }
         }
       },
       "block_order": [
+        "8ffcfe3f-89d3-4692-92bb-2deabd20d175",
         "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-0",
         "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-1",
-        "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-2",
-        "5f0e23d2-4cc0-4982-acf9-8935732cb01c",
-        "a749ef8c-b8df-429d-b6ae-cc41edc28c2b",
-        "d1a3f4fa-41bb-4e78-bfcf-c627308650e2",
-        "d40cde76-dd90-451f-b2cf-79e3cbf33220",
-        "1e8e1f25-0141-4329-95a6-c95457d93750",
-        "5d5ca76c-e8f2-4934-9414-3f1b8a793ebf"
+        "template--17821893493037__311862e4-191e-4bd6-bc5d-0594dce09037-167661823032ed75d3-2"
       ],
       "settings": {
         "title": "Collections",
-        "image_ratio": "square",
+        "image_ratio": "in-between",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -128,15 +93,15 @@
     "image-with-text": {
       "type": "image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/model-poses-with-neon-reflection.jpg",
+        "image": "shopify:\/\/shop_images\/Rose_0.webp",
         "image_ratio": "square",
-        "bg_color": "#000",
-        "text_color": "#fff",
-        "buttons_color": "#181818",
-        "heading": "Image with text",
-        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-        "button_label": "Button label",
-        "button_link": "",
+        "bg_color": "#ed9393",
+        "text_color": "#ffffff",
+        "buttons_color": "#000000",
+        "heading": "Elevate Your Style with Our Exquisite Jewelry",
+        "text": "<p>Adorn yourself with the stunning beauty of our latest necklace. Handcrafted with care, this exquisite piece is a true work of art. Delicately suspended on a delicate chain, the centerpiece of the necklace is a mesmerizing gemstone that shimmers and sparkles in the light, catching everyone's eye.<\/p>",
+        "button_label": "SHOP NOW!",
+        "button_link": "shopify:\/\/collections\/all",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -147,198 +112,136 @@
         "title": "Featured collection",
         "collection": "new-arrivals",
         "products_to_show": 12,
-        "image_ratio": "adapt",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "large"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured products",
-        "collection": "all",
-        "products_to_show": 8,
-        "image_ratio": "adapt",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "disabled": true,
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
+        "image_ratio": "square",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "multicolumn": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/applouse-512.png",
+            "title": "15 Years legacy",
+            "text": "<ol><li>Shine Bright Like a Diamond with Our Dazzling Creations<\/li><\/ol>"
           }
         },
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/check-mark-6-512.png",
+            "title": "Certified Products",
+            "text": "<p>Embrace Your Unique Style with Our Eclectic Selection<\/p>"
+          }
+        },
+        "be56e752-e47c-4872-a740-2515833f0e4d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pngtree_return_icon_4722210.png",
+            "title": "Easy Returns",
+            "text": "<p>Unleash Your Inner Radiance with Our Stunning Gems<\/p>"
           }
         },
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/Pngtree_asymmetric_cartoon_black_heart_clipart_5952114.png",
+            "title": "Satisfied Customers",
+            "text": "<p>Be the Envy of Everyone with Our Exclusive Jewelry Line<\/p>"
           }
         }
       },
       "block_order": [
         "column1",
         "column2",
+        "be56e752-e47c-4872-a740-2515833f0e4d",
         "column3"
       ],
       "settings": {
-        "title": "",
-        "image_width": "third",
+        "title": "Make a Statement with Our Bold and Beautiful Pieces",
         "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
         "swipe_on_mobile": false,
-        "color_scheme": "background-1",
+        "bg_color": "#ed9393",
+        "text_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ce049539-694f-4454-8ff9-a0444a11cec6": {
+      "type": "frequently-asked-questions",
+      "blocks": {
+        "d572563e-959e-4cd5-8eac-37736783c17b": {
+          "type": "text",
+          "settings": {
+            "question": "What are the different types of jewelry?",
+            "answer": "<p>The different types of jewelry include necklaces, bracelets, earrings, rings, brooches, anklets, cufflinks, and more.<\/p>"
+          }
+        },
+        "13aaad7b-b07a-44d3-9761-2166b03323b9": {
+          "type": "text",
+          "settings": {
+            "question": "What materials are commonly used in jewelry making?",
+            "answer": "<p>Some of the most commonly used materials in jewelry making include precious metals such as gold, silver, and platinum, as well as gemstones, diamonds, pearls, beads, and crystals.<\/p>"
+          }
+        },
+        "3e689fc9-b413-4d32-af06-3abf07e29a92": {
+          "type": "text",
+          "settings": {
+            "question": "What factors determine the value of a piece of jewelry?",
+            "answer": "<p>The value of a piece of jewelry is determined by a variety of factors, including the materials used, the quality of craftsmanship, the rarity and quality of any gemstones or diamonds, and the overall design and aesthetic appeal.<\/p>"
+          }
+        },
+        "a7f14fb4-249f-45b6-9290-8167ee52d02c": {
+          "type": "text",
+          "settings": {
+            "question": "What are some popular jewelry trends?",
+            "answer": "<p>Popular jewelry trends can vary from season to season, but some timeless styles include minimalist jewelry, statement pieces, layering necklaces, mixed metal jewelry, and personalized pieces.<\/p>"
+          }
+        },
+        "9eef39c1-69fd-4992-af16-2be26fe83a63": {
+          "type": "text",
+          "settings": {
+            "question": "How can I care for my jewelry?",
+            "answer": "<p>To care for your jewelry, it is important to store it in a safe and dry place when not in use, avoid exposing it to chemicals or harsh cleaning agents, and regularly clean and polish it to keep it looking its best.<\/p>"
+          }
+        },
+        "5b944b5c-07f6-4f39-9319-59f38b3d00c8": {
+          "type": "text",
+          "settings": {
+            "question": "How can I start a jewelry business?",
+            "answer": "<p>Starting a jewelry business requires a lot of planning, research, and investment. Some steps to consider include developing a business plan, sourcing materials and suppliers, creating a brand and marketing strategy, setting up an online store or physical location, and building a customer base.<\/p>"
+          }
+        },
+        "c795fe09-0d51-4a3d-8544-29df81b9c79d": {
+          "type": "text",
+          "settings": {
+            "question": "What factors determine the value of a piece of jewelry?",
+            "answer": "<p>The value of a piece of jewelry is determined by a variety of factors, including the materials used, the quality of craftsmanship, the rarity and quality of any gemstones or diamonds, and the overall design and aesthetic appeal.<\/p>"
+          }
+        },
+        "adddf44f-9ae6-4df8-914d-d6b14ad7a8cb": {
+          "type": "text",
+          "settings": {
+            "question": "What are the different types of jewelry?",
+            "answer": "<p>The different types of jewelry include necklaces, bracelets, earrings, rings, brooches, anklets, cufflinks, and more.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d572563e-959e-4cd5-8eac-37736783c17b",
+        "13aaad7b-b07a-44d3-9761-2166b03323b9",
+        "3e689fc9-b413-4d32-af06-3abf07e29a92",
+        "a7f14fb4-249f-45b6-9290-8167ee52d02c",
+        "9eef39c1-69fd-4992-af16-2be26fe83a63",
+        "5b944b5c-07f6-4f39-9319-59f38b3d00c8",
+        "c795fe09-0d51-4a3d-8544-29df81b9c79d",
+        "adddf44f-9ae6-4df8-914d-d6b14ad7a8cb"
+      ],
+      "settings": {
+        "title": "Frequently Asked Question",
+        "text": "<p>The most common questions about how our business works and what can do for you<\/p>",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -349,11 +252,7 @@
     "311862e4-191e-4bd6-bc5d-0594dce09037",
     "image-with-text",
     "235750c2-34ee-4151-a9ae-af72de252465",
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "multicolumn",
+    "ce049539-694f-4454-8ff9-a0444a11cec6"
   ]
 }

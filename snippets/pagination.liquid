@@ -10,44 +10,42 @@
     - paginate: {Object}
     - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
 {% endcomment %}
-
 <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- if paginate.parts.size > 0 -%}
-  <div class="pagination-wrapper">
-    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-      <ul class="pagination__list list-unstyled" role="list">
-      {%- if paginate.previous -%}
-        <li>
-          <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
-            {% render 'icon-caret' %}
-          </a>
-        </li>
-      {%- endif -%}
-
-      {%- for part in paginate.parts -%}
-        <li>
-          {%- if part.is_link -%}
-            <a href="{{ part.url }}{{ anchor }}" class="pagination__item link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
-          {%- else -%}
-            {%- if part.title == paginate.current_page -%}
-              <span class="pagination__item pagination__item--current" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+  <div class="w-full flex justify-center mt-8">
+    <nav class="flex" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+      <ul class="flex items-center space-x-2">
+        {%- for part in paginate.parts -%}
+          <li>
+            {%- if part.is_link -%}
+              <a href="{{ part.url }}{{ anchor }}" class="px-3 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
             {%- else -%}
-              <span class="pagination__item">{{ part.title }}</span>
+              {%- if part.title == paginate.current_page -%}
+                <span class="px-3 py-2 rounded-full text-sm font-medium text-white bg-black pagination__item--current" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+              {%- else -%}
+                <span class="px-3 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-100">{{ part.title }}</span>
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-
-      {%- if paginate.next -%}
-        <li>
-          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
-            {%- render 'icon-caret' -%}
-          </a>
-        </li>
-      {%- endif -%}
+          </li>
+        {%- endfor -%}
+        {%- if paginate.previous -%}
+          <li>
+            <a href="{{ paginate.previous.url }}{{ anchor }}" class="" aria-label="{{ 'general.pagination.previous' | t }}">
+              {% render 'icon-caret' %}
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if paginate.next -%}
+          <li>
+            <a href="{{ paginate.next.url }}{{ anchor }}" class="" aria-label="{{ 'general.pagination.next' | t }}" >
+              {%- render 'icon-caret' -%}
+            </a>
+          </li>
+        {%- endif -%}
       </ul>
     </nav>
   </div>
 {%- endif -%}
+

@@ -1,5 +1,5 @@
 <div class="relative ">
-  <div  class="md:h-[366px] md:w-[300px] h-[225px] w-[150px] overflow-hidden {% if card_collection.featured_image and media_aspect_ratio == 'in-between' %} rounded-lg{% else %} {%-endif-%}">
+  <div  class="md:h-[300px] md:w-[300px] h-[200px] w-[200px] overflow-hidden {% if  media_aspect_ratio == 'portrait' %} rounded-lg {% elsif  media_aspect_ratio == 'Square' %} rounded-full {% else %} {%-endif-%}">
       {%- if card_collection.featured_image -%}
             <img class="object-cover w-full h-full " src="{{ card_collection.featured_image | image_url: width: 1500 }}" loading="lazy" alt="img" >
             {%- else -%}
@@ -7,7 +7,7 @@
           {%- endif -%}
         </div>
       
-        <div  class="card-styles absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full overflow-hidden ">
+        <div  class="card-styles absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full overflow-hidden {% if  media_aspect_ratio == 'portrait' %} rounded-lg {% elsif  media_aspect_ratio == 'Square' %} rounded-full {% else %} {%-endif-%}">
            <a href="{{ card_collection.url }}" class="text-white font-bold text-center  text-base lg:text-xl  w-[100%] h-[100%] flex justify-center items-end pb-8 " >
               {%- if card_collection.title != blank -%}
                 {{- card_collection.title | escape -}}
@@ -19,15 +19,3 @@
 
           </div>
 </div>
-
-  {% comment %} <div class="relative group">
-    <a href="{{ card_collection.url }}">
-      <img class="w-full h-auto" src="{{ card_collection.image | img_url: 'large' }}" alt="{{ card_collection.title }}">
-    </a>
-    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
-      <h2 class="text-white text-xl font-bold mb-2">{{ card_collection.title }}</h2>
-      <a href="{{ card_collection.url }}" class="bg-white text-black px-4 py-2 rounded-md hover:bg-black hover:text-white transition duration-300">Shop now</a>
-    </div>
-  </div>
-   {% endcomment %}

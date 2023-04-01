@@ -80,14 +80,14 @@
     </div>
   {% endif %}
 
-  <div class="flex page-width">
+  <div class="md:flex justify-center page-width">
     {% if section.settings.enable_filtering %}
-      <div class="w-3/12">
+      <div class=" md:w-3/12">
         {% render 'filters', results: collection, enable_sorting: section.settings.enable_filtering %}
       </div>
     {% endif %}
 
-    <div class="{% if section.settings.enable_filtering %} w-9/12 {% endif %}">
+    <div class="{% if section.settings.enable_filtering %}w-full md:w-10/12 {% endif %}">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty" id="product-grid" data-id="{{ section.id }}">
@@ -100,26 +100,15 @@
             </div>
           </div>
         {%- else -%}
-          <div class="collection">
-            <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-3 gap-2">
+        
+          <div class="flex flex-wrap justify-center gap-4">
               {%- for product in collection.products -%}
-  
-                <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating
-                  %}
-                </li>
+                  {% render 'card-product', product_product: product %}
               {%- endfor -%}
-            </ul>
-    
-            {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
-            {%- endif -%}
-          </div>
+            </div>
+              {%- if paginate.pages > 1 -%}
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              {%- endif -%}
         {%- endif -%}
       {%- endpaginate -%}
     </div>

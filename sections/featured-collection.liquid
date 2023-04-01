@@ -2,7 +2,7 @@
   {% unless section.settings.title == blank %}
   <div class="flex items-center justify-between mb-10">
     <h2 class="text-black font-bold sm:text-2xl text-base"> {{ section.settings.title | escape }}</h2>
-    <a class="flex items-center md:text-base text-xs  " href="{{ collection.url }}">
+    <a class="flex items-center md:text-base text-xs  " href="{{ section.settings.all_products_link }}">
       <h1 class="mr-2"> See all the products </h1>
        {% render 'icon-arrow', class: '' %}
      </a>
@@ -37,6 +37,11 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "url",
+      "id": "all_products_link",
+      "label": "All products link"
     },
     {
       "type": "range",

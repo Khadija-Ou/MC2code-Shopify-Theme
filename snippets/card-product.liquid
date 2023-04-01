@@ -1,43 +1,32 @@
-{% assign img_url = product_product.featured_image.src | img_url: '500x' %}
-{% assign img_url_hover = product_product.images[1].src | img_url: '500x' %}
-
-<div class="relative">
-  <div class="md:h-[300px] md:w-[300px] h-[225px] w-[250px]  overflow-hidde {% if product_product.featured_image and media_aspect_ratio == 'in-between' %} rounded-lg {% else %} {%-endif-%}">
+<div class=" relative  md:w-[350px] h-full w-[250px]  max-w-md bg-white border border-gray-200 rounded-lg shadow">
+  <div class="  overflow-hidden {% if product_product.featured_image and media_aspect_ratio == 'in-between' %} rounded-lg {% else %} {%-endif-%}">
     <a href="{{ product_product.url }}">
-          {% if product_product.featured_image %}
-                  <img class="object-cover w-full h-full " src="{{ product_product.featured_image | image_url: width: 1500 }}" loading="lazy" alt="img">
-          {% else %}
-              {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
-          {% endif %}
-      </a>
+      {% if product_product.featured_image %}
+        <img
+          class="md:h-[300px] w-full h-[225px] object-cover transition-transform-gpu hover:scale-150"
+          src="{{ product_product.featured_image | image_url: width: 1500 }}"
+          loading="lazy"
+          alt="img">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'md:h-[300px] w-full h-[225px] object-cover bg-gray-100' }}
+      {% endif %}
+    </a>
   </div>
-  
-      <div class="flex flex-col justify-center mt-4 p-2">
-          <a href="{{ product_product.url }}" class="text-gray-700 uppercase text-sm text-center pb-2">{{ product_product.title }}</a>
-          {% if product_product.compare_at_price %}
-            <div class="flex justify-between pt-2">
-            <p class="text-[#E04343]">{{ product_product.price | money }}</p>
-            <p class="text-[#585656] line-through ">{{ product_product.compare_at_price_min | money }}</p>
-            </div>
-        {% else %}
-        <p class="text-[#E04343] text-center pt-2">{{ product_product.price | money }}</p>
-        {% endif %}
-        <button class="bg-[#ED9393] mt-4 hover:bg-[#EA6A6A] text-white font-bold py-2 px-4 rounded-full transform hover:scale-105 transition duration-300 ease-in-out">
-          Button
-        </button>
 
+  <div class="flex flex-col justify-between mt-4 p-2">
+    <a href="{{ product_product.url }}" class="text-gray-700 uppercase text-sm text-center pb-2">{{ product_product.title }}</a>
+    {% if product_product.compare_at_price %}
+      <div class="flex justify-between pt-2">
+        <p class="text-[#E04343]">{{ product_product.price | money }}</p>
+        <p class="text-[#585656] line-through ">{{ product_product.compare_at_price_min | money }}</p>
       </div>
-      
- </div>
+    {% else %}
+      <p class="text-[#E04343] text-center pt-2">{{ product_product.price | money }}</p>
+    {% endif %}
+    <button class="bg-[#ED9393] mt-4 hover:bg-[#EA6A6A] text-white font-bold py-2 px-4 rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+      Button
+    </button>
 
+  </div>
 
- {% comment %}
-  //this is for on haver show the second image for later usage, still needs to be customized
-  {% assign img_url = product.featured_image.src | img_url: '500x' %}
- {% assign img_url_hover = product.images[1].src | img_url: '500x' %}
- 
- <div class="relative group">
-   <img class="w-full h-auto" src="{{ img_url }}" alt="{{ product.title | escape }}" />
-   <img class="absolute top-0 left-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition duration-300" src="{{ img_url_hover }}" alt="{{ product.title | escape }}" />
- </div>
-  {% endcomment %}
+</div>

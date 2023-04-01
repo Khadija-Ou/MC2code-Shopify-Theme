@@ -3,14 +3,14 @@
       {% unless section.settings.title == blank %}
         <div class="flex items-center justify-between mb-10">
         <h2 class="text-black font-bold sm:text-2xl text-base"> {{ section.settings.title | escape }}</h2>
-        <a class="flex items-center md:text-base text-xs  " href="{{ collection.url }}">
+        <a class="flex items-center md:text-base text-xs " href="{{ section.settings.all_categories_link }}">
          <h1 class="mr-2"> Browse all categories </h1>
           {% render 'icon-arrow', class: '' %}
         </a>
       </div>
       {% endunless %}
 
-    <div class= "">
+    <div class= "flex justify-center">
       <div class="scrollbar flex md:space-x-10 space-x-8 ">
     {%- for block in section.blocks -%}
               {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, class: 'collection' %}
@@ -32,21 +32,30 @@
       "label": "Header"
     },
     {
-    "type": "select",
-  "id": "image_ratio",
-  "options": [
-    {
-      "value": "in-between",
-      "label": "option_1"
+      "type": "url",
+      "id": "all_categories_link",
+      "label": "All categories link"
     },
     {
-      "value": "square",
-      "label": "option_2"
-    }
-  ],
-  "default": "square",
-  "label": "option_2"
-},
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "portrait",
+          "label": "portrait"
+        },
+        {
+          "value": "Square",
+          "label": "Square"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        }
+      ],
+      "default": "Square",
+      "label": "Image ratio"
+    },
     {
       "type": "range",
       "id": "padding_top",

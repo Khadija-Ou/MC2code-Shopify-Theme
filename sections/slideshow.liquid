@@ -2,7 +2,7 @@
     <div class="splide__track relative ">
       <ul class="splide__list ">
         {% for block in section.blocks %}          
-          <li class="splide__slide h-[70vh] lg:h-[60vh] xl:h-[40vh] " >
+          <li class="splide__slide h-[78vh] lg:h-[70vh] xl:h-[70vh] " >
             {%- if block.settings.image != blank -%}
               <img class="h-full w-full object-cover " src="{{ block.settings.image | image_url }}" loading="lazy" alt="img">
               {%- else -%}
@@ -13,7 +13,7 @@
                 <h1 class=" page-width font-bold text-2xl lg:text-4xl ">
                    {{ block.settings.heading }}   
                  </h1>
-                 <div class="page-width text-sm lg:text-base">
+                 <div class="page-width text-base lg:text-base">
                     {{ block.settings.text }}
                  </div>
                 <div class="page-width">

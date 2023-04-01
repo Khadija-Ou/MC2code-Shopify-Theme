@@ -1,8 +1,8 @@
 {
   "current": {
-    "page_width": 1000,
     "type_header_font": "avenir_next_n6",
     "type_body_font": "avenir_next_n4",
+    "page_width": 1000,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -10,13 +10,15 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Welcome to our store</p>",
-              "bg_color": "#ffffff",
-              "text_color": "#000000"
+              "text": "<p>FREE SHIPPING & RETURNS WORLDWIDE. SHOP NOW!<\/p>",
+              "bg_color": "#ed9393",
+              "text_color": "#ffffff"
             }
           }
         },
-        "block_order": ["announcement-bar-0"],
+        "block_order": [
+          "announcement-bar-0"
+        ],
         "settings": {
           "text_align": "text-center"
         }
@@ -24,7 +26,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/unick-logo_1.png",
+          "logo": "shopify:\/\/shop_images\/pngwing.com_c35ca968-7fbd-4bcd-9d56-6bcb62a97e30.png",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
@@ -39,30 +41,30 @@
           "53c1c391-33d3-4045-94f0-77c637d06874": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/unick-logo_1.png",
-              "image_width": 100,
+              "image": "shopify:\/\/shop_images\/pngwing.com.png",
+              "image_width": 200,
               "alignment": "center"
             }
           },
           "footer-2": {
             "type": "text",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              "heading": "Contact Info",
+              "subtext": "<p>Phone: +212623230621<br\/>Email: khadijajs@icloud.com<\/p>"
             }
           },
           "footer-0": {
             "type": "link_list",
             "settings": {
               "heading": "Company",
-              "menu": "company"
+              "menu": "footer"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
-              "menu": "products"
+              "menu": "main-menu"
             }
           }
         },
@@ -73,24 +75,24 @@
           "footer-1"
         ],
         "settings": {
-          "show_newsletter": false,
-          "newsletter_title": "",
-          "newsletter_subtitle": "",
-          "newsletter_html": "",
-          "copyright_text": "",
-          "payment_enable": true
+          "bg_color": "#ed9393",
+          "text_color": "#ffffff"
         }
       },
       "main-password-header": {
         "type": "main-password-header",
-        "settings": {}
+        "settings": {
+        }
       },
       "main-password-footer": {
         "type": "main-password-footer",
-        "settings": {}
+        "settings": {
+        }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -106,8 +108,11 @@
               }
             }
           },
-          "block_order": ["announcement-bar-0"],
-          "settings": {}
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
@@ -120,7 +125,8 @@
           "blocks": {
             "footer-0": {
               "type": "link_list",
-              "settings": {}
+              "settings": {
+              }
             },
             "footer-1": {
               "type": "link_list",
@@ -135,16 +141,25 @@
               }
             }
           },
-          "block_order": ["footer-0", "footer-1", "footer-2"],
-          "settings": {}
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "bg_color": "#fff",
+            "text_color": "#000"
+          }
         },
         "main-password-header": {
           "type": "main-password-header",
-          "settings": {}
+          "settings": {
+          }
         },
         "main-password-footer": {
           "type": "main-password-footer",
-          "settings": {}
+          "settings": {
+          }
         }
       }
     }

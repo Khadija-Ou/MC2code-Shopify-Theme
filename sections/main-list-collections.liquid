@@ -1,68 +1,65 @@
 <div class="page-width" style="padding-top: {{ section.settings.padding_top }}px;  padding-bottom: {{ section.settings.padding_bottom }}px">
   <h1 class="text-2xl md:text-3xl text-center text-black mb-8">{{ section.settings.title | escape }}</h1>
- 
+
   <div class="flex justify-center ">
     <ul class="grid gap-2 md:gap-4 md:grid-cols-3 grid-cols-1 sm:grid-cols-2 " role="list">
-    {%- for collection in collections -%}
+      {%- for collection in collections -%}
         {% render 'main-card-collection', card_collection: collection, card_color: section.settings.card_color, title_botton_color: section.settings.title_botton_color, text_color: section.settings.text_color %}
-    {%- endfor -%}
-  </ul>
+      {%- endfor -%}
+    </ul>
   </div>
 </div>
 
 {% schema %}
-{
-  "name": "t:sections.main-list-collections.name",
-  "class": "section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "t:sections.main-list-collections.settings.title.label",
-      "default": "Collections"
-    },
-    {
-      "type": "color",
-      "id": "card_color",
-      "label": "Card color",
-      "default": "#fff"
-    },
-    {
-      "type": "color",
-      "id": "title_botton_color",
-      "label": "Title and botton color",
-      "default": "#001"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#000"
-    },
-    {
-      "type": "header",
-      "content": "SECTION PADDING"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Top padding",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Bottom padding",
-      "default": 36
-    }
-  ]
-}
+  {
+    "name": "t:sections.main-list-collections.name",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.main-list-collections.settings.title.label",
+        "default": "Collections"
+      },
+      {
+        "type": "color",
+        "id": "card_color",
+        "label": "Card color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "title_botton_color",
+        "label": "Title and botton color",
+        "default": "#001"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000"
+      }, {
+        "type": "header",
+        "content": "SECTION PADDING"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Top padding",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Bottom padding",
+        "default": 36
+      }
+    ]
+  }
 {% endschema %}
