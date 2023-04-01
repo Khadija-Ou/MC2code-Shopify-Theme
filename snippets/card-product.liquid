@@ -23,9 +23,11 @@
     {% else %}
       <p class="text-[#E04343] text-center pt-2">{{ product_product.price | money }}</p>
     {% endif %}
-    <button class="bg-[#ED9393] mt-4 hover:bg-[#EA6A6A] text-white font-bold py-2 px-4 rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
-      Button
-    </button>
+    <a href="{{ product_product.url }}">
+      <h1 onclick="{{ product_product.url }}" class="bg-[#ED9393] mt-4 text-center hover:bg-[#EA6A6A] text-white font-bold py-2 px-4 rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        Add to the cart
+      </h1>
+    </a>
 
   </div>
 

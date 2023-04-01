@@ -27,7 +27,7 @@
         "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/pngwing.com_c35ca968-7fbd-4bcd-9d56-6bcb62a97e30.png",
-          "logo_width": 90,
+          "logo_width": 80,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "show_line_separator": true,
@@ -42,7 +42,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/pngwing.com.png",
-              "image_width": 200,
+              "image_width": 125,
               "alignment": "center"
             }
           },

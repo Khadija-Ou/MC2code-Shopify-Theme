@@ -3,11 +3,65 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "form": {
       "type": "contact-form",
+      "blocks": {
+        "8e03ddb7-2ad8-485e-adf0-c777ca6028e6": {
+          "type": "textfield",
+          "settings": {
+            "label": "First Name",
+            "required": false
+          }
+        },
+        "88662312-391a-4c40-9fc8-ef840087dbd5": {
+          "type": "textfield",
+          "settings": {
+            "label": "Last Name",
+            "required": false
+          }
+        },
+        "c15c9d6e-f8e0-46a6-bbb7-dd65427a8caa": {
+          "type": "email",
+          "settings": {
+            "label": "Email"
+          }
+        },
+        "5c9b031d-d7a8-4055-a155-b1cc8b560fbf": {
+          "type": "textarea",
+          "settings": {
+            "label": "Message",
+            "required": true
+          }
+        },
+        "5873c111-30a6-4433-afda-849b35404274": {
+          "type": "submit",
+          "settings": {
+            "label": "Send"
+          }
+        }
+      },
+      "block_order": [
+        "8e03ddb7-2ad8-485e-adf0-c777ca6028e6",
+        "88662312-391a-4c40-9fc8-ef840087dbd5",
+        "c15c9d6e-f8e0-46a6-bbb7-dd65427a8caa",
+        "5c9b031d-d7a8-4055-a155-b1cc8b560fbf",
+        "5873c111-30a6-4433-afda-849b35404274"
+      ],
       "settings": {
+        "width": "wide",
+        "title": "",
+        "content_text": "<p>If you would like to get in touch with me, please don't hesitate to reach out. You can contact me by email at khadijajs@gmail.com or by phone at +212 623230621. I look forward to hearing from you!<\/p>",
+        "social_enable": true,
+        "text_alignment": "text-left",
+        "background": "#E5E5E5",
+        "text_color": "#000000",
+        "form_position": "flex-reverse",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
